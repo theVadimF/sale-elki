@@ -1,0 +1,215 @@
+html,
+body,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+samp,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+canvas,
+embed,
+figcaption,
+output,
+ruby,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: top;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("./fonts/Montserrat-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.page_top {
+  width: 100%;
+  height: 2056px;
+  background-image: url("./img/main_bg.jpeg");
+  background-position: bottom;
+  background-size: cover;
+  display: flex;
+}
+
+header {
+  background-color: #FFF;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  margin-top: 36px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 21px 17px;
+  padding-right: 29px;
+}
+
+header .logo_wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 63px;
+  flex-shrink: 0;
+}
+
+header .logo_wrap .logo {
+  width: 36px;
+  height: 62px;
+  object-fit: contain;
+}
+
+header .logo_wrap .name {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 36px */
+  background: var(--2, linear-gradient(91deg, #F10 7.44%, #FD8E43 25.89%, #FF2700 41.78%, #FF5A00 66.58%, #FF2700 94.63%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex-shrink: 0;
+}
+
+header .menu {
+  list-style: none;
+  display: flex;
+  gap: 45px;
+  margin-right: 68px;
+  flex-shrink: 0;
+}
+
+header .menu a {
+  color: #7D6248;
+  text-align: center;
+  font-family: Arial;
+  font-size: 17.032px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  text-decoration: none;
+}
+
+header .search {
+  padding: 9px 16px;
+  color: #7D6248;
+  font-family: Arial;
+  font-size: 17.032px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  border-radius: 39.032px;
+  border: 2.839px solid #7E6043;
+  background-image: url('./img/ico/search.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  margin-right: 23px;
+  width: 300px;
+  padding-right: 45px;
+}
+
+header .buttons .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 6px;
+}
+
+.cart_icon:hover, .fav_icon:hover {
+  fill: rgba(125, 98, 72, 0.33);
+}
+
+.cart_icon:active, .fav_icon:active {
+  fill: rgba(0, 0, 0, 0.4);
+  stroke: #7D6248;
+}
+
+header .buttons .button span {
+  color: #7D6248;
+  text-align: center;
+  font-family: Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+header .buttons {
+  display: flex;
+  gap: 23px;
+}
+
+header .search::placeholder {
+  color: #7D6248;
+}
