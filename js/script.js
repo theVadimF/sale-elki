@@ -69,10 +69,26 @@ async function animate_about() {
   }
 }
 
-let product_pics = new Splide('.product_slider', {
-  perPage: 3,
-  pagination: false,
-  gap: 24,
-  // padding: 106,
-});
-product_pics.mount({}, MyTransition);
+// let product_pics = new Splide('.product_slider', {
+//   pagination: false,
+//   arrows: false,
+//   gap: 200,
+//   padding: 106,
+// });
+// product_pics.mount({}, MyTransition);
+
+$('.product_slider').each(function() {
+  let product_pics = new Splide(this, {
+    pagination: false,
+    arrows: false,
+    gap: 200,
+    padding: 106,
+  });
+  $(this).children('.button.next').click(function() {
+    product_pics.go('>')
+  })
+  $(this).children('.button.back').click(function() {
+    product_pics.go('<')
+  })
+  product_pics.mount({}, MyTransition);
+})
