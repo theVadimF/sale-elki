@@ -81,14 +81,40 @@ $('.product_slider').each(function() {
   let product_pics = new Splide(this, {
     pagination: false,
     arrows: false,
-    gap: 200,
+    gap: 24,
     padding: 106,
+    perPage: 3,
   });
-  $(this).children('.button.next').click(function() {
+  $(this).children('.button_wrap.__right').children('button').click(function() {
     product_pics.go('>')
   })
-  $(this).children('.button.back').click(function() {
+  $(this).children('.button_wrap.__left').children('button').click(function() {
     product_pics.go('<')
   })
-  product_pics.mount({}, MyTransition);
+  product_pics.mount();
 })
+
+$('.recents_slider').each(function() {
+  let product_recent = new Splide(this, {
+    pagination: false,
+    arrows: false,
+    gap: 24,
+    padding: 27,
+    perPage: 4,
+  });
+  $(this).children('.button_wrap.__right').children('button').click(function() {
+    product_recent.go('>')
+  })
+  $(this).children('.button_wrap.__left').children('button').click(function() {
+    product_recent.go('<')
+  })
+  product_recent.mount();
+})
+
+// const swiper = new Swiper('.product_slider', {
+//   // speed: 400,
+//   slidesPerGroup: 3,
+//   slidesPerView: 3,
+//   spaceBetween: 24,
+//   watchSlidesVisibility: true,
+// });
