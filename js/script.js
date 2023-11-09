@@ -85,6 +85,12 @@ $('.product_slider').each(function() {
     gap: 24,
     padding: 106,
     perPage: 3,
+    breakpoints: {
+      1250: {
+        perPage: 2,
+        padding: 30,
+      },
+    }
   });
   $(this).children('.button_wrap.__right').children('button').click(function() {
     product_pics.go('>')
@@ -102,6 +108,13 @@ $('.recents_slider').each(function() {
     gap: 24,
     padding: 27,
     perPage: 4,
+    breakpoints: {
+      1250: {
+        perPage: 3,
+        padding: 5,
+        gap: 7,
+      },
+    }
   });
   $(this).children('.button_wrap.__right').children('button').click(function() {
     product_recent.go('>')
@@ -112,7 +125,13 @@ $('.recents_slider').each(function() {
   product_recent.mount();
 })
 
-animate_top();
+addEventListener("DOMContentLoaded", () => {
+  animate_top();
+
+  if (window.innerWidth < desktop_width) {
+    animate_buttons();
+  }
+});
 
 function trigger_animation(element, callback) {
   if ($(element).hasClass('__initial')){
@@ -131,3 +150,21 @@ $(window).scroll(function () {
   trigger_animation('.block', animate_buttons);
   trigger_animation('.about_box', animate_about);
 });
+
+$('.mobile_close').click(async function() {
+  $('header').removeClass('__visible')
+  await new Promise(r => setTimeout(r, 1000));
+  $('header').removeClass('__open');
+})
+
+$('.mobile_menu').click(async function() {
+  $('header').addClass('__open');
+  await new Promise(r => setTimeout(r, 100));
+  $('header').addClass('__visible');
+})
+
+function star_light() {
+  $('.logo_wrap .light').toggleClass('__small');
+}
+
+setInterval(star_light, 2000);
