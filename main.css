@@ -319,7 +319,7 @@ header .search::placeholder {
 .bottom_blocks {
   margin-top: auto;
   position: relative;
-  width: 1557px;
+  width: 1550px;
   margin-left: auto;
   margin-right: auto;
   height: 100%;
@@ -430,6 +430,7 @@ header .search::placeholder {
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
+  z-index: 1;
 }
 
 .section_heading.__recents {
@@ -591,6 +592,7 @@ header .search::placeholder {
   font-weight: 600;
   line-height: 100%;
   text-decoration: none;
+  margin-right: 10px;
 }
 
 .product_card .subtitle {
@@ -970,7 +972,227 @@ footer .name {
   right: -45px;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1750px) {
+  .add_to_cart_btn {
+    font-size: 18px;
+    margin-left: auto;
+  }
+
+  header .search {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1550px) {
+  .product_card .title {
+    font-size: 24px;
+  }
+
+  .product_card .subtitle {
+    font-size: 18px;
+  }
+
+  .add_to_cart_btn {
+    font-size: 14px;
+  }
+
+  header .logo_wrap {
+    margin-right: 15px;
+  }
+
+  header .menu {
+    margin-right: 15px;
+    gap: 25px;
+  }
+
+  header .search {
+    margin-right: 15px;
+  }
+
+  .bottom_blocks {
+    width: 100vw;
+  }
+
+  .bottom_blocks .block {
+    width: 440px;
+    height: 355px;
+  }
+
+  .bottom_blocks .title {
+    font-size: 30px;
+  }
+
+  .bottom_blocks .block.__left {
+    left: 20px;
+  }
+
+  .bottom_blocks .block.__right {
+    right: 20px;
+  }
+
+  .about_box .content .title {
+    font-size: 24px;
+  }
+
+  .about_box .content .text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .page_section {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .about_box.__initial {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about_box {
+    width: calc(100% - 40px);
+  }
+
+  .reviews .review_card .top .name {
+    font-size: 24px;
+  }
+
+  .reviews .score_wrap .star {
+    height: 18px;
+    width: 18px;
+  }
+
+  .reviews .review_card .text {
+    font-size: 18px;
+  }
+
+  .page_top {
+    height: 1700px;
+  }
+
+  .recent_product .title {
+    font-size: 16px;
+  }
+
+  .recent_product .subtitle {
+    font-size: 12px;
+  }
+
+  .recent_product .price {
+    font-size: 18px;
+  }
+
+  .recent_product .old_price {
+    font-size: 12px;
+  }
+
+  .recent_product {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .recent_product .img {
+    height: 110px;
+  }
+
+  .recents_slider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .recents_slider .button.back {
+    left: -35px;
+  }
+
+  .recents_slider .button.next {
+    right: -35px;
+  }
+
+  .footer_wrap {
+    gap: 40px;
+  }
+
+  footer .list .header {
+    font-size: 18px;
+  }
+
+  footer .list a {
+    font-size: 12px;
+  }
+
+  footer .list.__socials a {
+    margin-left: 25.5px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .product_card .title {
+    font-size: 16px;
+  }
+
+  .product_card .subtitle {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .like_btn svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  .product_card .bottom .price {
+    font-size: 20px
+  }
+
+  .product_card .bottom .old {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .product_card .product_img {
+    height: 350px;
+  }
+
+  .section_heading {
+    font-size: 48px;
+  }
+
+  .open_all {
+    font-size: 24px;
+  }
+
+  header .menu a {
+    font-size: 14px;
+  }
+
+  header .search {
+    font-size: 14px;
+  }
+
+  header .buttons .button svg {
+    height: 24px;
+    width: 24px;
+  }
+
+  header .buttons .button span {
+    font-size: 14px;
+  }
+
+  header .logo_wrap .name {
+    font-size: 24px;
+  }
+
+  header .logo_wrap .logo {
+    width: 26px;
+    height: 42px;
+  }
+
+  .add_to_cart_btn {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1250px) {
   .about_box {
     flex-direction: column;
     align-items: center;
@@ -979,5 +1201,35 @@ footer .name {
   .about_box .content {
     margin: 0;
     margin-top: 20px;
+  }
+
+  .product_card .title {
+    font-size: 12px;
+  }
+
+  .product_card .subtitle {
+    font-size: 8px;
+  }
+
+  .product_card .product_img {
+    height: 165px;
+  }
+
+  .like_btn {
+    height: 12px;
+    width: 12px;
+  }
+
+  .like_btn svg {
+    height: 12px;
+    width: 12px;
+  }
+
+  .product_card .bottom .price {
+    font-size: 8px;
+  }
+
+  .product_card .bottom .old {
+    font-size: 6px;
   }
 }

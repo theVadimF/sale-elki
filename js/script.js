@@ -42,7 +42,7 @@ let main_pics = new Splide('.main_pics', {
 });
 main_pics.mount({}, MyTransition);
 
-const desktop_width = 1650;
+const desktop_width = 1250;
 
 async function animate_top() {
   await new Promise(r => setTimeout(r, 2000));
