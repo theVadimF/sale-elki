@@ -1258,7 +1258,92 @@ header .mobile_close {
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1150px) {
+
+  header {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 50;
+    margin-top: 0;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  header.__open {
+    display: flex;
+  }
+
+  header.__visible {
+    opacity: 1;
+  }
+
+  header .mobile_close {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    background: none;
+    border: none;
+    padding: 0;
+    display: block;
+  }
+
+  header .logo_wrap {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  header .menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 35px;
+  }
+
+  header .menu li {
+    width: fit-content;
+  }
+
+  header .menu a {
+    width: fit-content;
+    font-size: 20px;
+  }
+
+  header .search {
+    display: none;
+  }
+
+  header .buttons .button svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  header .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 75px);
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .mobile_menu {
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    display: block;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .product_slider .button_wrap {
+    width: 33px;
+  }
+
   .about_box {
     flex-direction: column;
     align-items: center;
@@ -1269,6 +1354,16 @@ header .mobile_close {
     margin-top: 20px;
   }
 
+  #navigation, #contact {
+    display: none;
+  }
+
+  .reviews .review_card .top .name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 950px) {
   .product_card .title {
     font-size: 12px;
   }
@@ -1310,11 +1405,6 @@ header .mobile_close {
 
   .section_heading {
     font-size: 20px;
-  }
-
-  .product_slider .button_wrap {
-    /* background: linear-gradient(-90deg, rgba(255,255,255,1) 40%, rgba(0,0,0,0) 100%); */
-    width: 33px;
   }
 
   .product_slider .button svg {
@@ -1399,86 +1489,6 @@ header .mobile_close {
 
   .page_top {
     height: 574.911px;
-  }
-
-  header {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    z-index: 50;
-    margin-top: 0;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: 0.4s;
-  }
-
-  header.__open {
-    display: flex;
-  }
-
-  header.__visible {
-    opacity: 1;
-  }
-
-  header .mobile_close {
-    position: absolute;
-    top: 40px;
-    left: 30px;
-    background: none;
-    border: none;
-    padding: 0;
-    display: block;
-  }
-
-  header .logo_wrap {
-    margin-right: 0;
-    margin-top: 20px;
-  }
-
-  header .menu {
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-    margin-bottom: 35px;
-  }
-
-  header .menu li {
-    width: fit-content;
-  }
-
-  header .menu a {
-    width: fit-content;
-    font-size: 20px;
-  }
-
-  header .search {
-    display: none;
-  }
-
-  header .buttons .button svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  header .buttons {
-    display: grid;
-    grid-template-columns: repeat(3, 75px);
-    justify-content: center;
-    gap: 25px;
-  }
-
-  .mobile_menu {
-    position: absolute;
-    top: 40px;
-    left: 30px;
-    display: block;
-    background: transparent;
-    border: none;
-    padding: 0;
   }
 
   .product_slider .splide__track {
@@ -1633,10 +1643,6 @@ header .mobile_close {
   }
 
   footer .name {
-    display: none;
-  }
-
-  #navigation, #contact {
     display: none;
   }
 

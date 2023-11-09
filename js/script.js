@@ -42,8 +42,6 @@ let main_pics = new Splide('.main_pics', {
 });
 main_pics.mount({}, MyTransition);
 
-const desktop_width = 1250;
-
 async function animate_top() {
   await new Promise(r => setTimeout(r, 2000));
   $('.top_banner .content').addClass('__clipped');
@@ -60,23 +58,15 @@ async function animate_buttons() {
 async function animate_about() {
   $('.about_box').removeClass('__initial');
   await new Promise(r => setTimeout(r, 1000));
-  if (window.innerWidth > desktop_width) {
+  if (window.innerWidth > 1250) {
     $('.about_box .content').removeClass('__initial');
     $('.about_box .shade').removeClass('__initial');
   } else {
-    $('.about_box .content').slideDown();
-    await new Promise(r => setTimeout(r, 500));
+    $('.about_box .content').slideDown('slow');
+    await new Promise(r => setTimeout(r, 600));
     $('.about_box .shade').removeClass('__initial');
   }
 }
-
-// let product_pics = new Splide('.product_slider', {
-//   pagination: false,
-//   arrows: false,
-//   gap: 200,
-//   padding: 106,
-// });
-// product_pics.mount({}, MyTransition);
 
 $('.product_slider').each(function() {
   let product_pics = new Splide(this, {
@@ -111,9 +101,11 @@ $('.recents_slider').each(function() {
     breakpoints: {
       1250: {
         perPage: 3,
+      },
+      950: {
         padding: 5,
         gap: 7,
-      },
+      }
     }
   });
   $(this).children('.button_wrap.__right').children('button').click(function() {
@@ -128,7 +120,7 @@ $('.recents_slider').each(function() {
 addEventListener("DOMContentLoaded", () => {
   animate_top();
 
-  if (window.innerWidth < desktop_width) {
+  if (window.innerWidth < 950) {
     animate_buttons();
   }
 });
