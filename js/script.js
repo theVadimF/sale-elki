@@ -45,6 +45,7 @@ main_pics.mount({}, MyTransition);
 const desktop_width = 1650;
 
 async function animate_top() {
+  await new Promise(r => setTimeout(r, 2000));
   $('.top_banner .content').addClass('__clipped');
   await new Promise(r => setTimeout(r, 1000));
   $('.top_banner .content').hide();
@@ -111,10 +112,22 @@ $('.recents_slider').each(function() {
   product_recent.mount();
 })
 
-// const swiper = new Swiper('.product_slider', {
-//   // speed: 400,
-//   slidesPerGroup: 3,
-//   slidesPerView: 3,
-//   spaceBetween: 24,
-//   watchSlidesVisibility: true,
-// });
+animate_top();
+
+function trigger_animation(element, callback) {
+  if ($(element).hasClass('__initial')){
+    let scrollTop = $(window).scrollTop(),
+      windowHeight = $(window).height(),
+      elem = $(element).offset().top,
+      final = elem - windowHeight,
+      distance = final - scrollTop;
+    if (distance < -50) {
+      callback();
+    }
+  }
+}
+
+$(window).scroll(function () {
+  trigger_animation('.block', animate_buttons);
+  trigger_animation('.about_box', animate_about);
+});
