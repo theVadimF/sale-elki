@@ -78,8 +78,22 @@ $('.product_slider').each(function() {
     breakpoints: {
       1250: {
         perPage: 2,
-        padding: 30,
+        padding: 106,
+        gap: 24,
       },
+      1200: {
+        padding: 50,
+      },
+      950: {
+        perPage: 3,
+        padding: 33,
+        gap: 10,
+      },
+      560: {
+        perPage: 2,
+      }, 420: {
+        padding: 30,
+      }
     }
   });
   $(this).children('.button_wrap.__right').children('button').click(function() {
@@ -102,9 +116,10 @@ $('.recents_slider').each(function() {
       1250: {
         perPage: 3,
       },
-      950: {
-        padding: 5,
+      680: {
+        padding: 8,
         gap: 7,
+        perPage: 2,
       }
     }
   });
