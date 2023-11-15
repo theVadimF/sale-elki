@@ -207,6 +207,33 @@ header .search {
   padding-right: 45px;
 }
 
+.mobile_search {
+  display: none;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.mobile_search .input {
+  padding: 5px 14px;
+  color: #7D6248;
+  font-family: Arial;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  border-radius: 39.032px;
+  border: 1px solid #7E6043;
+  background-image: url(./img/ico/search.svg);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  width: 100%;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-size: 12px;
+  max-width: 250px;
+  padding-right: 30px
+}
+
 header .buttons .button {
   display: flex;
   flex-direction: column;
@@ -1266,6 +1293,31 @@ header .mobile_close {
 } */
 
 @media (max-width: 1200px) {
+  .mobile_search {
+    display: flex;
+  }
+
+  .mobile_search .input {
+    padding: 8px 24px;
+    color: #7D6248;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    border-radius: 39.032px;
+    border: 1px solid #7E6043;
+    background-image: url(./img/ico/search.svg);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    width: 100%;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-size: 16px;
+    max-width: 400px;
+    padding-right: 35px;
+  }
+
   header {
     display: none;
     position: fixed;
@@ -1380,6 +1432,16 @@ header .mobile_close {
 }
 
 @media (max-width: 950px) {
+  .mobile_search .input {
+    padding: 5px 14px;
+    font-size: 12px;
+    line-height: 12px;
+    border: 1px solid #7E6043;
+    background-size: 12px;
+    max-width: 250px;
+    padding-right: 30px
+  }
+
   .product_slider .button_wrap {
     width: 33px;
   }
